@@ -49,8 +49,8 @@
 										<li>SERVER IP Publica:  GJ_IP</li>
 										<li>SERVER IP Privada:  <!--#echo var="SERVER_ADDR" --></li>
 										<li>
-											<pre><code>
-												GJ_LOCALIZACION
+											<pre><code id='json'>
+												
 											</code></pre>
 										</li>
 									</ul>
@@ -354,6 +354,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				var data = { "data":  GJ_LOCALIZACION }
+				document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
+			</script>
+
 
 	</body>
 </html>
